@@ -1,7 +1,8 @@
 <?php
 	
-	require_once 'functions.php';
-	
+	require 'functions.php';
+    require 'Multichain.php';
+
 	$config=read_config();
 	$chain=@$_GET['chain'];
 	

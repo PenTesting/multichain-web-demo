@@ -1,7 +1,9 @@
 <?php
-	require_once 'functions.php';
-	
+	require 'Multichain.php';
+	require 'functions.php';
+
 	$config=read_config();
+
 	set_multichain_chain($config[$_GET['chain']]);
 
 	if (no_displayed_error_result($data, multichain('gettxoutdata', $_GET['txid'], (int)$_GET['vout']))) {
